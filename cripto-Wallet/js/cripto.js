@@ -1,32 +1,27 @@
 $(function() {
-	$.get("http://127.0.0.1:8000/users/5656677787/", function(respuestaSolicitud){
+	$.get("http://127.0.0.1:8000/users/", function(respuestaSolicitud){
    		alert(JSON.stringify(respuestaSolicitud));
 	});
 
-	$.ajax({
-                data:  {
-					        "id": "500011",
-					        "name": "gbgbgbg",
-					        "gender": 4,
-					        "birthday": "2018-03-18",
-					        "email": "davi@davi.com",
-					        "attributes": {
-					            "rfrfr": "gtgtgt"
-					        },
-					        "type": 1,
-					        "status": 2,
-					        "creation_time": "2018-03-18T00:09:24Z",
-					        "update_time": "2018-03-18T00:09:27Z",
-					        "active": true
-    					}, //datos que se envian a traves de ajax
+	$.ajax({	
+                data:  {	
+                			"id_account": "100006502837604",
+					        "name": "Mou Developer",
+					        "gender": "male",
+					        "birthday": "2018-03-18",	        
+			     	        "email": "reptilianguitar@gmail.com",
+					        "attributes": {"gender":"male"}
+   						 },
                 url:   'http://127.0.0.1:8000/users/', //archivo que recibe la peticion
                 type:  'post', //método de envio
+                dataType: 'json',
+                contentType: "application/json",
                 success:  function (response) { //una vez que el archivo recibe el request lo procesa y lo devuelve
                         console.log(response);
                 }
         });	
 
-	$.get("http://127.0.0.1:8000/users/500011/", function(respuestaSolicitud){
+	$.get('http://127.0.0.1:8000/users/24r/', function(respuestaSolicitud){
    		alert(JSON.stringify(respuestaSolicitud));
 	});
 })

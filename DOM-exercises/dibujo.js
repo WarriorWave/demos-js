@@ -27,6 +27,6 @@ function dibujar(ev ,linea = lineas.value) {
 	linea = parseInt(linea)
 	console.log(linea)
 	for (let i = 0; i < linea; i++) {
-		dibujarLinea("#AAF", xi, yi += (Math.round(300 / linea)) , xf += (Math.round(300 / linea)), 300)	
+		dibujarLinea("#AAF", xi, yi += (Math.round(dibujo.height / linea)) , xf += (Math.round(dibujo.width / linea)), dibujo.height)	
 	}
 }
